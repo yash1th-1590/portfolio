@@ -287,8 +287,78 @@
   }
   .section-title .highlight { color:var(--accent); }
 
+  /* ───────────── ABOUT / STORY ───────────── */
+  #story { background:var(--bg); }
+  .story-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:start;
+  }
+  .story-text p {
+    color:var(--text2);
+    font-size:0.95rem;
+    line-height:1.85;
+    margin-bottom:16px;
+  }
+  .story-text p strong { color:var(--text); font-weight:600; }
+  .story-highlights {
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .story-highlight {
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:18px 22px;
+    display:flex; align-items:flex-start; gap:14px;
+    transition:border-color .2s, transform .2s;
+  }
+  .story-highlight:hover { border-color:rgba(124,109,240,0.3); transform:translateY(-2px); }
+  .story-highlight .icon {
+    width:38px; height:38px; min-width:38px;
+    background:rgba(124,109,240,0.1);
+    border:1px solid rgba(124,109,240,0.2);
+    border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:1rem;
+  }
+  .story-highlight .body .h { font-weight:600; font-size:0.9rem; color:var(--text); margin-bottom:2px; }
+  .story-highlight .body .p { font-size:0.8rem; color:var(--text3); line-height:1.6; }
+
+  /* ───────────── WHAT I DO ───────────── */
+  #services { background:var(--surface); }
+  .service-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:16px;
+  }
+  .service-card {
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:28px 26px;
+    transition:border-color .2s, transform .2s;
+    position:relative;
+    overflow:hidden;
+  }
+  .service-card:hover { border-color:rgba(124,109,240,0.3); transform:translateY(-3px); }
+  .service-card .num {
+    font-family:var(--mono);
+    font-size:0.7rem; color:var(--text3);
+    margin-bottom:18px;
+  }
+  .service-icon {
+    width:42px; height:42px;
+    border-radius:11px;
+    background:var(--gradient);
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.1rem;
+    margin-bottom:16px;
+  }
+  .service-card .title { font-weight:700; font-size:1rem; color:var(--text); margin-bottom:8px; }
+  .service-card .desc { font-size:0.82rem; color:var(--text3); line-height:1.7; }
+
   /* ───────────── SKILLS ───────────── */
-  #skills { background:var(--surface); }
   .skill-grid {
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
@@ -494,6 +564,7 @@
     .edu-card { flex-direction:column; text-align:center; gap:16px; }
     .edu-cgpa { margin-left:0; }
     .cert-grid { grid-template-columns:1fr; }
+    .story-grid { grid-template-columns:1fr; }
   }
   @media (max-width: 600px) {
     nav { padding:12px 4%; }
@@ -514,6 +585,7 @@
   <div class="nav-logo">battu<span>.</span></div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#services">What I Do</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#certifications">Certifications</a></li>
@@ -592,6 +664,135 @@
     <span class="small">NPTEL National Topper</span>
   </div>
 </div>
+
+<!-- ═══ WHO I AM / STORY ═══ -->
+<section id="story">
+  <span class="section-tag">// Who I Am</span>
+  <h2 class="section-title">The Story <span class="highlight">So Far</span></h2>
+  <div class="story-grid">
+    <div class="story-text">
+      <p>
+        I'm <strong>Yashwanth</strong>, a Computer Science undergraduate at Mahatma Gandhi
+        Institute of Technology, Hyderabad, with a sharp focus on backend engineering and
+        applied artificial intelligence. I care less about following tutorials and more
+        about understanding <strong>why</strong> a system is built the way it is — which is
+        what pulled me toward backend architecture, data flow, and AI-assisted tooling.
+      </p>
+      <p>
+        Over the past year I've moved from learning fundamentals to actually shipping
+        software: REST APIs that hold up under real use, database schemas that don't fall
+        apart at scale, and AI integrations that solve problems instead of just demoing
+        well. My approach is simple — understand the problem deeply, design before coding,
+        and write systems that other engineers can read and extend.
+      </p>
+      <p>
+        Academically, I've maintained a <strong>9.18 CGPA</strong> while topping the NPTEL
+        national rankings in Advanced Computational Techniques, and I keep stacking
+        certifications in data science, analytics, and systems fundamentals to stay
+        technically well-rounded rather than narrowly specialised.
+      </p>
+    </div>
+    <div class="story-highlights">
+      <div class="story-highlight">
+        <div class="icon">🧠</div>
+        <div class="body">
+          <div class="h">Curious by default</div>
+          <div class="p">I dig into how things work under the hood — from query planners to LLM context windows.</div>
+        </div>
+      </div>
+      <div class="story-highlight">
+        <div class="icon">⚙️</div>
+        <div class="body">
+          <div class="h">Builder mindset</div>
+          <div class="p">I'd rather ship a working v1 and iterate than perfect something that never reaches users.</div>
+        </div>
+      </div>
+      <div class="story-highlight">
+        <div class="icon">📈</div>
+        <div class="body">
+          <div class="h">Consistent track record</div>
+          <div class="p">9.18 CGPA, a national NPTEL topper rank, and 10+ certifications across data and systems.</div>
+        </div>
+      </div>
+      <div class="story-highlight">
+        <div class="icon">🤝</div>
+        <div class="body">
+          <div class="h">Collaborative engineer</div>
+          <div class="p">Comfortable working in Agile teams, writing clear documentation, and reviewing others' code.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHAT I DO ═══ -->
+<section id="services">
+  <span class="section-tag">// What I Do</span>
+  <h2 class="section-title">How I Can <span class="highlight">Contribute</span></h2>
+  <div class="service-grid">
+
+    <div class="service-card">
+      <div class="num">01</div>
+      <div class="service-icon">🔧</div>
+      <div class="title">Backend Development</div>
+      <div class="desc">
+        Designing and building REST APIs and backend services with Flask and Django —
+        covering authentication, RBAC, validation, and clean route architecture.
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="num">02</div>
+      <div class="service-icon">🗄️</div>
+      <div class="title">Database Design</div>
+      <div class="desc">
+        Structuring relational schemas, writing efficient SQL, and optimising queries
+        with SQLAlchemy ORM for performance at scale.
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="num">03</div>
+      <div class="service-icon">🤖</div>
+      <div class="title">AI / LLM Integration</div>
+      <div class="desc">
+        Wiring LLMs like Google Gemini and LLaMA 3.1 into real applications — code
+        analysis, repository intelligence, and automated decision support.
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="num">04</div>
+      <div class="service-icon">📊</div>
+      <div class="title">Data Analysis</div>
+      <div class="desc">
+        Turning raw data into structured insight through predictive modelling, analytics
+        pipelines, and clear, decision-ready reporting.
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="num">05</div>
+      <div class="service-icon">🧩</div>
+      <div class="title">Full-Stack Delivery</div>
+      <div class="desc">
+        Connecting backend logic to usable interfaces with HTML, CSS, Bootstrap, and
+        Jinja2 — shipping complete, end-to-end features.
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="num">06</div>
+      <div class="service-icon">🧪</div>
+      <div class="title">Code Quality &amp; Tooling</div>
+      <div class="desc">
+        Static analysis with Python's AST module, Git-based workflows, and Agile/SDLC
+        practices to keep codebases maintainable.
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- ═══ SKILLS ═══ -->
 <section id="skills">
