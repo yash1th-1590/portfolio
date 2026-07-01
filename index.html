@@ -483,6 +483,22 @@
   }
   .cert-card .link:hover { color:var(--text); }
 
+  /* Featured (Forage) cert cards — larger with description */
+  .cert-card.featured {
+    grid-column: span 2;
+    padding:26px 30px;
+  }
+  .cert-card.featured .title { font-size:1.1rem; }
+  .cert-card.featured .desc {
+    font-size:0.85rem;
+    color:var(--text3);
+    line-height:1.75;
+    margin:12px 0 16px;
+  }
+  @media (max-width: 700px) {
+    .cert-card.featured { grid-column: span 1; }
+  }
+
   /* ───────────── EDUCATION ───────────── */
   .edu-card {
     background:var(--surface);
@@ -973,27 +989,39 @@
   <h2 class="section-title">Certifications &amp; <span class="highlight">Achievements</span></h2>
   <div class="cert-grid">
 
- <div class="cert-card">
+    <div class="cert-card featured">
       <div class="badge">Forage</div>
       <div class="title">Software Development Job Simulation</div>
       <div class="issuer">Datacom</div>
       <div class="date">Issued: June 2026</div>
+      <div class="desc">
+        Performed root cause analysis and bug fixing in a React/JavaScript web application;
+        Improved application reliability and user experience through code remediation.
+      </div>
       <a href="VirtualExperience/Software Development Job Simulation(Datacom).pdf" target="_blank" class="link">View Certificate →</a>
     </div>
 
-    <div class="cert-card">
+    <div class="cert-card featured">
       <div class="badge">Forage</div>
       <div class="title">Data Science Job Simulation</div>
       <div class="issuer">British Airways</div>
       <div class="date">Issued: May 2026</div>
+      <div class="desc">
+        Scraped and analysed customer review data using ML; Built a supervised predictive
+        booking model; Delivered findings as a structured report.
+      </div>
       <a href="VirtualExperience/Data Science Job Simulation(British Airways).pdf" target="_blank" class="link">View Certificate →</a>
     </div>
 
-    <div class="cert-card">
+    <div class="cert-card featured">
       <div class="badge">Forage</div>
       <div class="title">Data Analytics Job Simulation</div>
       <div class="issuer">Deloitte</div>
       <div class="date">Issued: Mar 2026</div>
+      <div class="desc">
+        Analysed telemetry data across 3+ datasets; Built interactive dashboards surfacing
+        operational trends; Delivered a recommendations report.
+      </div>
       <a href="VirtualExperience/Data Analytics Job Simulation(Deloitte).pdf" target="_blank" class="link">View Certificate →</a>
     </div>
 
