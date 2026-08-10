@@ -10,7 +10,7 @@ Computer Science undergraduate focused on software development, full-stack devel
 
 - **[CampusLink](https://github.com/yash1th-1590/campuslink)** — Full-stack event management platform built with Flask and MySQL.
 - **[AI Code Complexity & Optimization Analyzer](https://github.com/yash1th-1590/ai-code-complexity-analyzer)** — AI-powered tool for analyzing code complexity and providing optimization insights.
-- **GitHub Insight Engine** — Platform for analyzing GitHub repositories and generating meaningful development insights.
+- **[GitHub Insight Engine](https://github.com/yash1th-1590/repository-insight-engine)** — Platform for analyzing GitHub repositories and generating meaningful development insights.
 
 ### Profiles
 
